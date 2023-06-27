@@ -1,0 +1,97 @@
+/*
+let js = 'amazing';
+console.log(40 + 8 + 23 - 10);
+
+console.log('Jonas');
+console.log(23);
+
+let firstName = 'Matilda';
+
+console.log(firstName);
+console.log(firstName);
+console.log(firstName);
+
+// Variable name conventions
+let jonas_matilda = "JM";
+let $function = 27;
+
+let person = "jonas";
+let PI = 3.1415
+
+let myFirstJob = 'Welder';
+let myCurrentJob = 'Programmer';
+
+console.log(myCurrentJob);
+*/
+
+/*
+let javascriptIsFun = true;
+console.log(javascriptIsFun);
+
+// console.log(typeof true);
+console.log(typeof javascriptIsFun);
+// console.log(typeof 23);
+// console.log(typeof 'Jonas');
+
+javascriptIsFun = 'YES!'
+console.log(typeof javascriptIsFun);
+// console.log(javascriptIsFun);
+
+let year;
+console.log(year);
+console.log(typeof year);
+
+year = 1994;
+console.log(typeof year);
+
+console.log(typeof null);
+*/
+
+/*
+let age = 28;
+age = 29;
+
+const birthYear = 1994;
+// birthYear = 1993;
+
+// const job;
+
+var job = 'programmer';
+// console.log(job);
+
+job = 'teacher';
+// console.log(job);
+
+lastName = 'Chan';
+console.log(lastName);
+*/
+
+// Math operators
+const now = 2037;
+const ageWill = now - 1994;
+const ageKhaliun = now - 2018;
+console.log(ageWill, ageKhaliun);
+
+console.log(ageWill * 2, ageWill / 10, 2 ** 3);
+// 2 ** 3 means 2 to the power of 3; 2 * 2 * 2
+
+const firstName = "William";
+const lastName = "Chan";
+console.log(firstName + ' ' + lastName);
+
+// Assignment operators
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1 = 101
+x--;
+x--;
+console.log(x);
+
+// Comparison operators
+console.log(ageWill > ageKhaliun); // >, <, >=, <=
+console.log(ageKhaliun >= 18);
+
+const isFullAge = ageKhaliun >= 18;
+
+console.log(now - 1994 > now - 2018);
