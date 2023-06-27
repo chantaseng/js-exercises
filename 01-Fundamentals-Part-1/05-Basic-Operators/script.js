@@ -66,6 +66,7 @@ lastName = 'Chan';
 console.log(lastName);
 */
 
+/*
 // Math operators
 const now = 2037;
 const ageWill = now - 1994;
@@ -95,3 +96,4 @@ console.log(ageKhaliun >= 18);
 const isFullAge = ageKhaliun >= 18;
 
 console.log(now - 1994 > now - 2018);
+*/
