@@ -115,7 +115,7 @@ const averageAge = ageWill + ageKhaliun / 2;
 console.log(ageWill, ageKhaliun, averageAge);
 */
 
-/*
+
 const firstName = 'William';
 const job = 'Programmer';
 const birthYear = 1994;
@@ -140,4 +140,3 @@ lines');
 console.log(`String with
 multiple
 lines`);
-*/
