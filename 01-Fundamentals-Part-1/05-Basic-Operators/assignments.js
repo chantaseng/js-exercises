@@ -1,6 +1,6 @@
 const country = "Canada";
-// let continent = "North America";
-let population = 38250000;
+let continent = "North America";
+let population = 38.25;
 
 // console.log(country);
 // console.log(continent);
@@ -22,10 +22,12 @@ console.log(language);
 // population ++;
 // console.log(population);
 
-const finlandPopulation = 6000000
+const finlandPopulation = 6
 console.log(population > finlandPopulation);
 
-const avgPopulation = 33000000;
+const avgPopulation = 33;
 console.log(population < avgPopulation);
 
-const description = "Portugal is in Europe, and its 11 million people speak portuguese"
+const description = country + ' is in ' + continent
++ ', and its ' + population + ' million people speak ' + language;
+console.log(description);
