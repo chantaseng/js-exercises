@@ -221,6 +221,7 @@ if (height) {
 }
 */
 
+/*
 // Equality Operators
 
 // const age = 18;
@@ -245,3 +246,4 @@ if (favourite === 23) {
 }
 
 if (favourite !== 23) console.log('Why not 23?');
+*/
