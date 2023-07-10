@@ -191,13 +191,11 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 // it to a ternary operator).
 
 let bill = 275;
-bill = 40;
-bill = 430;
-const x = bill >= 50 && bill <= 300 ? 0.15 : 0.2;
-console.log(x);
-const tip = bill * x;
+// bill = 40;
+// bill = 430;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}.`);
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}.`);
 
 // 2. Print a string to the console containing
 // the bill value, the tip, and the final value
