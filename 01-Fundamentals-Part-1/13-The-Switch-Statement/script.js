@@ -248,6 +248,7 @@ if (favourite === 23) {
 if (favourite !== 23) console.log('Why not 23?');
 */
 
+/*
 // Logical Operator
 
 const hasDriverLicense = true; // A
@@ -272,4 +273,47 @@ if (hasDriverLicense && hasGoodVision && !isTired) {
   console.log('Sarah is able to drive!');
 } else {
   console.log('Someone else should drive...');
+}
+*/
+
+// Switch Operator
+
+const day = 'monday'; // usually would be the user input
+
+switch (day) {
+  case 'monday': // day === 'monday'
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+    break; // break is a stopper, so it doesnt continue to the next block of code
+  case 'tuesday':
+    console.log('Prepare theory videos');
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('Write code examples');
+    break;
+  case 'friday':
+    console.log('Record videos');
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('Enjoy the weekends');
+    break;
+  default:
+    console.log('Not a valid day'); // when user input invalid input
+}
+
+if (day === 'monday') {
+  console.log('Plan course structure');
+  console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+  console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === "thursday") {
+  console.log('Write code examples');
+} else if (day === 'friday') {
+  console.log('Record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('Enjoy the weekends');
+} else {
+  console.log('Not a valid date');
 }
