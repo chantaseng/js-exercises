@@ -349,4 +349,4 @@ if (age >= 18) {
 console.log(drink2);
 
 // ternary operator is an expression unlike if/else statement so i can put the expression in a template literal
-console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`)
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
