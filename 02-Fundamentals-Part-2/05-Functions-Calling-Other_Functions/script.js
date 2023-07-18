@@ -67,6 +67,7 @@ console.log(age2);
 // defined in the code.
 */
 
+/*
 // Arrow functions
 const calcAge3 = birthYear => 2037 - birthYear; // => what we want to return and store it in a variable to be able to use the function
 const age3 = calcAge3(1994);
@@ -82,6 +83,24 @@ const yearsUntilRetirement = (birthYear, firstName) => {
   return `${firstName} retires in ${retirement} years`;
 }
 
-
 console.log(yearsUntilRetirement(1994, 'William'));
 console.log(yearsUntilRetirement(1974, 'Bob'));
+*/
+
+// Function calling other functions
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+};
+
+function fruitProcessor(apples, oranges) {
+
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apple and ${
+    orangePieces} pieces of orange.`;
+  return juice;
+};
+
+console.log(fruitProcessor(2,3));
