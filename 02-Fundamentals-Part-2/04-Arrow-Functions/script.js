@@ -66,3 +66,22 @@ console.log(age2);
 // is you can call function declaration before they are
 // defined in the code.
 */
+
+// Arrow functions
+const calcAge3 = birthYear => 2037 - birthYear; // => what we want to return and store it in a variable to be able to use the function
+const age3 = calcAge3(1994);
+console.log(age3);
+
+// More than 1 line of code? {} and return keyword are re-introduced
+// multiple parameters, put parameters in ()
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  // return retirement;
+  return `${firstName} retires in ${retirement} years`;
+}
+
+
+console.log(yearsUntilRetirement(1994, 'William'));
+console.log(yearsUntilRetirement(1974, 'Bob'));
