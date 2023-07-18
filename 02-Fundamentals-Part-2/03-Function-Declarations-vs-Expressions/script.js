@@ -39,3 +39,28 @@ console.log(appleJuice);
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 */
+
+// Function declarations vs expressions
+
+// line 47 to 52 is a function declaration
+
+function calcAge1(birthYear) {
+  return 2037 - birthYear;
+}
+
+const age1 = calcAge1(1994);
+console.log(age1);
+
+// line 56 to 62 is a function expression
+
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+}
+
+const age2 = calcAge2(1994);
+console.log(age2);
+
+
+// Main dif between function declaration and expression
+// is you can call function declaration before they are
+// defined in the code.
