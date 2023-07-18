@@ -15,6 +15,7 @@ console.log(madagascar);
 console.log(france);
 */
 
+/*
 // Function declarations vs expression
 
 // Declaration
@@ -40,3 +41,17 @@ const percFrance2 = percentageOfWorld1(67.75);
 console.log(percCanada2);
 console.log(percMadagascar2);
 console.log(percFrance2);
+*/
+
+// Arrow function
+const percentageOfWorld3 = (population, country) => {
+  const percentage = (population / 7900) * 100;
+  return `${country} has ${population}, so it is ${
+    percentage}% of the world population.`
+}
+const percCanada3 = percentageOfWorld3(38.25, 'Canada');
+const percMadagascar3 = percentageOfWorld3(1400, 'Madagascar');
+const percFrance3 = percentageOfWorld3(640, 'France');
+console.log(percCanada3);
+console.log(percMadagascar3);
+console.log(percFrance3);
