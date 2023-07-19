@@ -132,3 +132,48 @@ const yearsUntilRetirement = function (birthYear,
 console.log(yearsUntilRetirement(1994, 'William'));
 console.log(yearsUntilRetirement(1950, 'Bob'));
 */
+
+// Intro to Arrays
+
+const friends = ['William', 'Bob', 'Flo'];
+console.log(friends);
+
+const y = new Array(1994, 1940, 2000, 2010);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]); // same thing as line 144
+
+// updating index 2, Flo will be replaced by hally
+friends[2] = 'Hally';
+console.log(friends);
+
+// Arrays are not a primitive value, thus we can mutate element in the array
+// friends = ['Joe', 'Johny']; but you cannot replace the entire array
+
+const firstName = 'Will'
+const will = [firstName, 'Chan', 2037 - 1994, 'dev', friends];
+console.log(will); // ['Will', 'Chan', 43, 'dev', Array(3)]
+console.log(will[4]); // ['Will', 'Bob', 'Hally']
+console.log(will[4][1]); // Bob
+
+// Exercise
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+}
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+// you cant subtract a whole array with a number.
+console.log(calcAge(years)); // NaN
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]),
+calcAge(years[years.length - 1])];
+console.log(ages);
