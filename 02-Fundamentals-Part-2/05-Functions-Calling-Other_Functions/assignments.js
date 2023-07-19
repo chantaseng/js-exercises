@@ -43,6 +43,7 @@ console.log(percMadagascar2);
 console.log(percFrance2);
 */
 
+/*
 // Arrow function
 const percentageOfWorld3 = (population, country) => {
   const percentage = (population / 7900) * 100;
@@ -55,3 +56,21 @@ const percFrance3 = percentageOfWorld3(640, 'France');
 console.log(percCanada3);
 console.log(percMadagascar3);
 console.log(percFrance3);
+*/
+
+// Functions calling other functions
+const percentageOfWorld1 = function (num) {
+  return (num / 7900) * 100;
+};
+
+const describePopulation = function (country, population) {
+
+  const percentage = percentageOfWorld1(population);
+  const description = `${country} has a ${population} million people, which is about ${
+    percentage}% of the world.`;
+  console.log(description);
+};
+
+describePopulation('Canada', 38.25);
+describePopulation('Madagascar', 380.25);
+describePopulation('France', 3800.25);
