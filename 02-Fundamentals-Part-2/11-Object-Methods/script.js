@@ -279,3 +279,47 @@ console.log(will);
 
 console.log(`${will.firstName} has ${will.friends.length} friends, and his best friend is called ${will.friends[0]}`);
 */
+
+// Object methods
+
+const will = {
+  firstName: 'Will',
+  lastName: 'Chan',
+  birthYear: 1994,
+  job: 'dev',
+  friends: ['Hally', 'Flo', 'Tom'],
+  hasDriversLicense: true,
+
+  // property that holds a function value
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // }
+
+  // What if we want to use THIS keyword!
+  // calcAge: function () {
+  //   console.log(this);
+  //   return 2037 - this.birthYear;
+  // }
+
+  // Calculate the age and create a new property on the current object
+  calcAge: function () {
+    console.log(this);
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${
+      this.calcAge()} years old ${this.job}, and he as ${
+      this.hasDriversLicense ? 'a' : 'no'} driver's license`
+  }
+};
+
+console.log(will.calcAge());
+console.log(will.age);
+
+// Challenge
+// "Will is a 43 years old dev, and he has a/no
+// driver's license."
+
+console.log(will.getSummary());
