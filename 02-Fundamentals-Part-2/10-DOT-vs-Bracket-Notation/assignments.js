@@ -111,6 +111,7 @@ neighbours[1] = 'Republic of Sweden';
 console.log(neighbours);
 */
 
+/*
 // Intro to Objects
 
 const myCountry = {
@@ -127,4 +128,28 @@ console.log(myCountry['neighbours'].length);
 console.log(myCountry['neighbours'][1]);
 myCountry['neighbours'].push = 'China';
 console.log(myCountry['neighbours']);
+console.log(myCountry);
+*/
+
+// Dot vs brackets notation
+
+const myCountry = {
+  country: 'Canada',
+  capital: 'Ottawa',
+  language: 'English',
+  population: '38.25',
+  neighbours: ['USA', 'Mexico', 'Japan']
+};
+
+// 'Finland has 6 million finnish-speaking people,
+// 3 neighbouring countries and a capital called Helsinki.
+
+console.log(`${myCountry.country} has ${
+  myCountry.population} million ${
+  myCountry.language}-speaking people, ${
+  myCountry.neighbours.length} neighbouring countries and the capital is ${myCountry.capital}`);
+
+myCountry.population += 2;
+console.log(myCountry);
+myCountry['population'] -= 2;
 console.log(myCountry);
