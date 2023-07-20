@@ -105,6 +105,6 @@ const calcTip = function (bill) {
 
 console.log(calcTip(100));
 
-const bills = function (bill) {
-  return bill +
-}
+// const bills = function (bill) {
+//   return bill +
+// }
