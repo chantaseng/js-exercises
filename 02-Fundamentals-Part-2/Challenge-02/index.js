@@ -95,12 +95,17 @@ checkWinner(scoreDolphins, scoreKoalas);
 
 // Test data: 125, 555, 44
 
+// const calcTip = function (bill) {
+//   if (bill > 50 && bill <= 300) {
+//     return (bill * 0.15);
+//   } else {
+//     return (bill * 0.2);
+//   }
+// }
+
+// use of ternary operator instead of if/else statement
 const calcTip = function (bill) {
-  if (bill > 50 && bill <= 300) {
-    return (bill * 0.15);
-  } else {
-    return (bill * 0.2);
-  }
+  return bill > 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
 }
 
 console.log(calcTip(100));
