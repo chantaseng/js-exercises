@@ -327,3 +327,11 @@ console.log(will.getSummary());
 */
 
 // Iteration: the for loop
+
+// How to repeat this line 10 times?
+console.log('Lifting weights repetition 1 🏋🏻‍♂️');
+
+// For loop keeps running while condition is TRUE
+for(let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋🏻‍♂️`);
+}
