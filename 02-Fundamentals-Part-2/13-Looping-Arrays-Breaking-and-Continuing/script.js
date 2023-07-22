@@ -326,6 +326,7 @@ console.log(will.age);
 console.log(will.getSummary());
 */
 
+/*
 // Iteration: the for loop
 
 // How to repeat this line 10 times?
@@ -334,4 +335,56 @@ console.log('Lifting weights repetition 1 🏋🏻‍♂️');
 // For loop keeps running while condition is TRUE
 for(let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep} 🏋🏻‍♂️`);
+}
+*/
+
+// Looping arrays, breaking and continuing
+
+const will = [
+  'Will',
+  'Chan',
+  2037 - 1994,
+  'dev',
+  ['Hally', 'Flo', 'Tom'],
+  true
+];
+
+const types = [];
+
+for (let i = 0; i < will.length; i++) {
+  console.log(will[i], typeof will[i]);
+
+  // filling types array
+  // types[i] = typeof will[i];
+  types.push(typeof will[i]);
+}
+
+console.log(types);
+
+// with a for loop, calculate ages and store it in the ages array
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break statement
+
+// we only want to print elements that are strings
+console.log('--- ONLY STRINGS ---')
+for (let i = 0; i < will.length; i++) {
+  if (typeof will[i] !== 'string') continue;
+
+  console.log(will[i], typeof will[i]);
+}
+
+// after a number is found, nothing else should be printed
+console.log('--- BREAK WITH NUMBER ---')
+for (let i = 0; i < will.length; i++) {
+  if (typeof will[i] === 'number') break;
+
+  console.log(will[i], typeof will[i]);
 }
