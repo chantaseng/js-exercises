@@ -415,6 +415,7 @@ for (let exercise = 1; exercise < 4; exercise++) {
 }
 */
 
+/*
 // while loop
 
 // FOR loop
@@ -439,3 +440,4 @@ while (dice !== 6) {
     console.log(`You rolled a ${dice}, loop ended!`);
   }
 }
+*/
