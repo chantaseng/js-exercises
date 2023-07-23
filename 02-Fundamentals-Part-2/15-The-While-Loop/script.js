@@ -391,6 +391,7 @@ for (let i = 0; i < will.length; i++) {
 }
 */
 
+/*
 // Looping backward and loops in loops
 
 const will = [
@@ -410,5 +411,31 @@ for (let exercise = 1; exercise < 4; exercise++) {
 
   for (let rep = 1; rep < 6; rep++) {
     console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}!`);
+  }
+}
+*/
+
+// while loop
+
+// FOR loop
+for(let rep = 1; rep <= 10; rep++) {
+  // console.log(`FOR: Lifting weights repetition ${rep} 🏋🏻‍♂️`);
+}
+
+let rep = 1 // counter outside of loop
+while ( rep <= 10) {
+  // console.log(`WHILE: Lifting weights repetition ${rep} 🏋🏻‍♂️`);
+  rep++; // counter update after the iteration
+}
+
+// line 432 is PRIMORDIAL to start the loop
+let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}!`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log(`You rolled a ${dice}, loop ended!`);
   }
 }
