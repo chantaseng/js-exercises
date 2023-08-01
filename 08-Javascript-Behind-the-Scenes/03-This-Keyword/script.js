@@ -39,6 +39,7 @@ calcAge(1994);
 // printAge();
 */
 
+/*
 // Hoisting and Temporal dead zone(TDZ)
 
 // Variables
@@ -85,3 +86,46 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+*/
+
+// This Keyword
+
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAge(1994);
+
+// In this function this keyword actually get its own this keyword but it is simply undefined
+
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAgeArrow(1980);
+
+// arrow function does not have this keyword. Not this keyword of this function but actually this keyword of the paretn scope(global scope) and it happens to be the window object in this case
+
+const will = {
+  year: 1994,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+will.calcAge();
+
+const khaliun = {
+  year: 2017,
+};
+
+// Method borrowing
+khaliun.calcAge = will.calcAge;
+khaliun.calcAge();
+
+const f = will.calcAge;
+f();
+
+// This happens because this f function is just now a regular function call. It is not attached to any object. There is no owner of this f function. Just a regular function called, so the this keyword is now undefined
