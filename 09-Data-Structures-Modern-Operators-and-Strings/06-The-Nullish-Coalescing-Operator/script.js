@@ -78,6 +78,16 @@ const restaurant = {
   },
 };
 
+restaurant.numGuests = 0;
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
+
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+/*
+////////////////////////////////////
+// OR operator and AND operator
 console.log("----- OR operator -----");
 // Use ANY data type, return ANY data type, short-circuiting
 console.log(3 || "Jonas");
@@ -105,6 +115,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
+*/
 
 /*
 //////////////////////////////////
