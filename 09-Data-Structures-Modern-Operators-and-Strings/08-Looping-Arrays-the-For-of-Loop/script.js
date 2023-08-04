@@ -78,6 +78,26 @@ const restaurant = {
   },
 };
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+
+// We want to loop the entire menu
+for (const item of menu) console.log(item);
+
+// We also want the current index with the current item
+
+// Old way to manually take element 0 and element 1
+
+// for (const item of menu.entries()) {
+//   // console.log(item);
+//   console.log(`${item[0] + 1}: ${item[1]}`);
+// }
+
+// Lets use the destructure assignment since we know that item is an array of 2 elements
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+
 /*
 //////////////////////////////////
 // Logical assignment operator
