@@ -56,6 +56,9 @@ const restaurant = {
   },
 };
 
+/*
+////////////////////////////
+// Sets
 const ordersSet = new Set([
   'Pasta',
   'Pizza',
@@ -81,17 +84,18 @@ console.log(ordersSet);
 for (const order of ordersSet) console.log(order);
 
 // Example
-
 const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
 // If i want to convert new set back to an array
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 // wannna know how many different position
 console.log(
+
   new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
 );
 // How many diff letters in my name
 console.log(new Set('WilliamChan').size);
+*/
 
 /*
 ///////////////////////////////////////////////
