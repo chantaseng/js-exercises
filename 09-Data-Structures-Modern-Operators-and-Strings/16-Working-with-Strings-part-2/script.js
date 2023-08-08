@@ -56,6 +56,76 @@ const restaurant = {
   },
 };
 
+const airline = 'TAP Air Portugal';
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Fix capitalization in name
+const passenger = 'jOnAs'; // should be Jonas
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// Function to fix capitalization
+const firstLetterCapital = function (word) {
+  // index 0 should be capital
+  if (word[0] !== word[0].toUpperCase())
+    console.log(word[0].toUpperCase() + word.slice(1));
+  else console.log(word);
+};
+
+// firstLetterCapital('william');
+// firstLetterCapital('Khaliun');
+
+// Comparing email
+const email = 'hello@jonas.io';
+const loginEmail = '    HelLo@Jonas.io \n';
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
+
+const normalizeEmail = loginEmail.toLowerCase().trim();
+console.log(normalizeEmail);
+console.log(email === normalizeEmail);
+
+// replacing
+const priceGB = '289,99£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement = 'All passengers come to the door 23. Boarding at door 23.';
+
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
+// Pre-replaceAll
+console.log(announcement.replace(/door/g, 'gate'));
+
+// Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Air'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the NEW AIRBUS family');
+}
+
+// Practice exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+
+  if (baggage.includes('knife') || baggage.includes('gun'))
+    console.log('You are not allowed to board!');
+  else console.log('Welcome aboard');
+};
+
+checkBaggage('I have a laptop, some Food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Some snacks and a gun for protection');
+
 /*
 // Working with strings - part 1
 const airline = 'TAP Air Portugal';
