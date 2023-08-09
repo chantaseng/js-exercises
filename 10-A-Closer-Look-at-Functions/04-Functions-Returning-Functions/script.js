@@ -103,3 +103,29 @@ document.body.addEventListener('click', high5);
 */
 
 // Functions returning functions
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+greeterHey('Jonas');
+greeterHey('Steven');
+
+greet('Hello')('Jonas');
+
+const greet1 = greeting => {
+  return name => {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+greet1('Hi')('Will');
+
+// Jonas way
+
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArr('Yo')('man');
