@@ -132,7 +132,6 @@ const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 greetArr('Yo')('man');
 */
 
-/*
 // The call and apply methods
 
 const lufthansa = {
@@ -162,7 +161,7 @@ const book = lufthansa.book;
 // Does NOT work
 // book(23, 'Nick Suzuki');
 
-book.call(eurowings, 23, 'Nick Suzuki');
+book.call(eurowings, 14, 'Nick Suzuki');
 console.log(eurowings);
 
 book.call(lufthansa, 253, 'Mary Poppins');
@@ -183,6 +182,51 @@ console.log(swiss);
 
 // apply no longer used, instead we use call with spread operator
 book.call(swiss, ...flightData);
-*/
 
 // The bind Method
+// book.call(eurowings, 23, 'Nick Suzuki');
+
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+bookEW(22, 'Cole Caufield');
+
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23('Carey Price');
+bookEW23('Saku Koivu');
+
+// With eventListener
+
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+// lufthansa.buyPlane();
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+// Partial application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23);
+// addVAT = (rate, value) => value + value * 0.23;
+
+console.log(addVAT(100));
+console.log(addVAT(23));
+
+const tax = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+console.log(tax(0.1)(200));
+
+const addVAT2 = tax(0.23);
+console.log(addVAT2(100));
+console.log(addVAT2(23));
