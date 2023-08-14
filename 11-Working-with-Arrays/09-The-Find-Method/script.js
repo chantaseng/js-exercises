@@ -331,7 +331,26 @@ console.log(totalDepositsUSD);
 
 // how to inspect using the 3rd parameter of the callback function? line 300 using arr
 
+/*
 // The find method
+
+const firstWithdrawal = movements.find(mov => mov < 0);
+console.log(movements);
+console.log(firstWithdrawal);
+
+// console.log(accounts);
+
+const account = accounts.find(acc => acc.owner === 'Khaliun Batmunkh');
+// console.log(account);
+
+const find = function (accounts) {
+  for (const acc of accounts) {
+    console.log(acc);
+    if (acc.owner === 'Khaliun Batmunkh') return acc;
+  }
+};
+console.log(find(accounts));
+*/
 
 ////////////////////////////////////////////////
 // CHALLENGES
