@@ -847,3 +847,67 @@ const dogs = [
   { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
   { weight: 32, curFood: 340, owners: ['Michael'] },
 ];
+
+// 1.
+dogs.forEach(dog => (dog.recFood = Math.trunc(dog.weight ** 0.75 * 28)));
+// console.log(dogs);
+
+// 2.
+const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
+// console.log(dogSarah);
+console.log(
+  `${dogSarah.owners[0]}'s dog is eating too ${
+    dogSarah.curFood < dogSarah.recFood ? 'little' : 'much'
+  }`
+);
+
+// 3.
+const ownersEatTooMuch = dogs
+  .filter(dog => dog.curFood > dog.recFood)
+  .flatMap(dog => dog.owners);
+console.log(ownersEatTooMuch);
+const ownersEatTooLittle = dogs
+  .filter(dog => dog.curFood < dog.recFood)
+  .flatMap(dog => dog.owners);
+console.log(ownersEatTooLittle);
+
+console.log(
+  `${ownersEatTooMuch.join(
+    ' and '
+  )}'s dogs eat too much and ${ownersEatTooLittle.join(
+    ' and '
+  )}'s dogs eat too little`
+);
+
+// 5.
+console.log(dogs.some(dog => dog.curFood === dog.recFood));
+
+// 6.
+const checkEatingOkay = dog =>
+  dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1;
+
+console.log(dogs.some(checkEatingOkay));
+
+// 7.
+const dogEatingOkay = dogs.filter(checkEatingOkay);
+console.log(dogEatingOkay);
+
+// 8.
+const dogsSorted = dogs.slice().sort((a, b) => a.recFood - b.recFood);
+
+console.log(dogsSorted);
+
+// 8. Create a shallow copy of the 'dogs' array and sort it by recommended food portion in an ascending order (keep in mind that the portions are inside the array's objects 😉)
+
+// console.log(movements);
+
+// return < 0, A, B (keep order)
+// return > 0, B, A (switch order)
+
+// ascending
+// movements.sort((a, b) => {
+//   if (a > b) return 1;
+//   if (a < b) return -1;
+// });
+// movements.sort((a, b) => a - b);
+// console.log(movements);
