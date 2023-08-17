@@ -420,3 +420,38 @@ console.log(10 / 3);
 */
 
 // Creating Dates
+
+// 4 ways of creating dates
+/*
+const now = new Date();
+console.log(now);
+
+console.log(new Date('Aug 17 2023 15:38:04'));
+console.log(new Date('December 25 1994'));
+console.log(new Date(account1.movementsDates[0]));
+
+console.log(new Date(1994, 9, 24, 8, 38, 1));
+console.log(new Date(2037, 10, 31));
+
+console.log(new Date(0));
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
+*/
+// Working with dates
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(future);
+console.log(future.getFullYear()); // never use getYear()
+console.log(future.getMonth()); // zero based so 10 is actully month 11(november)
+console.log(future.getDate());
+console.log(future.getDay()); // day of the week
+console.log(future.getHours());
+console.log(future.getMinutes());
+console.log(future.getSeconds());
+console.log(future.toISOString());
+console.log(future.getTime());
+
+console.log(new Date(2142274980000));
+
+console.log(Date.now());
+
+future.setFullYear(2040);
+console.log(future);
