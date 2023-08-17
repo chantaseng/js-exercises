@@ -386,3 +386,33 @@ console.log(parseInt('230_000'));
 */
 
 // Workign with bigInt
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(534535986980959842342423n);
+console.log(BigInt(534535986980959842342423));
+
+// Operations
+console.log(100000n + 100000n);
+console.log(4285727535893058834782742n * 10000000n);
+// console.log(Math.sqrt(16n));
+
+// Cannot mix BigInt with other type; unless you convect into Bigint
+const huge = 59869735378923757465837587348n;
+const num = 23;
+console.log(huge * BigInt(num));
+
+// Exception
+console.log(20n > 15);
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n == '20');
+
+console.log(huge + 'is a very long string');
+
+console.log(11n / 3n);
+console.log(10 / 3);
