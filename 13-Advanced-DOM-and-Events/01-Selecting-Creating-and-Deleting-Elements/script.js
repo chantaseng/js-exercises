@@ -70,5 +70,3 @@ document
     message.remove();
     // message.parentElement.removeChild(message);
   });
-
-// hello 12
