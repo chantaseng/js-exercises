@@ -33,6 +33,7 @@ document.addEventListener('keydown', function (e) {
 /////////////////////////
 // LECTURE
 
+/*
 //Selecting elements
 console.log(document.documentElement);
 console.log(document.head);
@@ -114,7 +115,44 @@ console.log(logo.dataset.versionNumber);
 logo.classList.add('c', 'j');
 logo.classList.remove('c', 'j');
 logo.classList.toggle('c');
-logo.classList.contains('c');
+logo.classList.contains('c'); // not includes
 
 // Dont use
-logo.className = 'jonas';
+// logo.className = 'jonas';
+*/
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current Scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // Scrolling
+
+  // Scrolls to first section but only when you are at the top of the page
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset,
+  //   s1coords.top + window.pageYOffset
+  // );
+
+  // Old way - will scroll to section1 no matter where you are
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  // Modern way
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
