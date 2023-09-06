@@ -148,6 +148,7 @@ window.addEventListener('scroll', function () {
 });
 */
 
+/*
 const section2 = document.querySelector('#section--2');
 const section3 = document.querySelector('#section--3');
 const section1Title = document.querySelector('.section__title');
@@ -155,6 +156,7 @@ const section1Title = document.querySelector('.section__title');
 section1.style.backgroundColor = 'orangered';
 section2.style.backgroundColor = 'blue';
 section3.style.backgroundColor = 'orangered';
+*/
 
 // Sticky navigation: Intersecction Observer API
 
@@ -191,6 +193,29 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(header);
+
+// Reveal sections
+const allSections = document.querySelectorAll('.section');
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // LECTURE
