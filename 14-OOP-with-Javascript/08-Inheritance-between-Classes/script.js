@@ -506,12 +506,12 @@ class Account {
     this.deposit(-val);
   }
 
-  approveLoan(val) {
+  _approveLoan(val) {
     return true;
   }
 
   requestLoan(val) {
-    if (this.approveLoan(val)) this.deposit(val);
+    if (this._approveLoan(val)) this.deposit(val);
     console.log(`Loan approved`);
   }
 }
@@ -523,7 +523,7 @@ const acc1 = new Account('Jonas', 'EUR', 1111);
 acc1.deposit(250);
 acc1.withdraw(140);
 acc1.requestLoan(1000);
-acc1.approveLoan(1000);
+acc1._approveLoan(1000);
 console.log(acc1.getMovements());
 
 console.log(acc1);
