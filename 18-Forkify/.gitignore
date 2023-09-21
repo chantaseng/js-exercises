@@ -1,5 +1,5 @@
-/18-Forkify/.parcel-cache
-/18-Forkify/dist
-/18-Forkify/node_modules
-/18-Forkify/package-lock.json
-/18-Forkify/package.json
+/.parcel-cache
+/dist
+/node_modules
+/package-lock.json
+/package.json
